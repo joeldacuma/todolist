@@ -34,7 +34,10 @@
     </ng-container>
     <ng-container matColumnDef="name">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Task name</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+      <mat-cell *matCellDef="let element" (click)="gotoTaskDetails(element)">
+        {{element.name}}
+        <i class="material-icons task-page" matTooltip="Task details">keyboard_arrow_right</i>
+      </mat-cell>
     </ng-container>
     <ng-container matColumnDef="description">
       <mat-header-cell *matHeaderCellDef mat-sort-header>Task description</mat-header-cell>
@@ -45,7 +48,7 @@
       <mat-cell *matCellDef="let element">{{element.created}}</mat-cell>
     </ng-container>
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row class="task-details" (click)="gotoTaskDetails(row)" *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <mat-row class="task-details" *matRowDef="let row; columns: displayedColumns"></mat-row>
   </table>
   <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
 </div>

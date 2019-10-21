@@ -11,7 +11,8 @@ import { MatTableModule,
          MatInputModule,
          MatCardModule,
          MatButtonModule,
-         MatDialogModule } from '@angular/material';
+         MatDialogModule,
+         MatTooltipModule } from '@angular/material';
 import { TaskComponent } from './task/task.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { TaskComponent } from './task/task.component';
     MatDialogModule,
     MatButtonModule,
     MatCardModule,
+    MatTooltipModule,
     WidgetsModule
   ],
   exports: [

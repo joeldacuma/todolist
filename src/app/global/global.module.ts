@@ -4,7 +4,8 @@ import { HeaderComponent } from './header/header.component';
 
 import { MatInputModule,
          MatIconModule,
-         MatButtonModule } from '@angular/material';
+         MatButtonModule,
+         MatTooltipModule } from '@angular/material';
 
 @NgModule({
   declarations: [HeaderComponent],
@@ -12,7 +13,8 @@ import { MatInputModule,
     CommonModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   exports: [
     HeaderComponent
