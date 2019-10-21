@@ -1,0 +1,44 @@
+<div>
+  <div class="row">
+    <div *ngIf="!isEdit" class="col-10">
+      <h1>Create Task</h1>
+    </div>
+    <div *ngIf="isEdit" class="col-10">
+      <h1>Update Task</h1>
+    </div>
+    <div class="col-2">
+        <div class="close-container" (click)="close()">
+            <i class="material-icons">close</i>
+          </div>
+    </div>
+  </div>
+  <div class="container">
+    <form [formGroup]="taskForm">
+      <div class="row">
+          <mat-form-field class="input-form" appearance="outline">
+              <mat-label>Task Name</mat-label>
+              <input matInput formControlName="name" placeholder="Enter task name...">
+            </mat-form-field>
+      </div>
+
+      <div class="row">
+          <mat-form-field class="input-form" appearance="outline">
+              <mat-label>Task Description</mat-label>
+              <input matInput formControlName="description" placeholder="Enter task description...">
+            </mat-form-field>
+      </div>
+
+      <div class="row">
+          <mat-form-field class="input-form" appearance="outline">
+              <mat-label>Created Date</mat-label>
+              <input matInput formControlName="created" placeholder="MM/DD/YYYY">
+            </mat-form-field>
+      </div>
+    </form>
+  </div>
+  
+  <div class="task-btn">
+      <button *ngIf="!isEdit" mat-flat-button color="warn" (click)="submit()">Submit</button>
+      <button *ngIf="isEdit" mat-flat-button color="primary" (click)="update()">Update</button>
+  </div>
+</div>

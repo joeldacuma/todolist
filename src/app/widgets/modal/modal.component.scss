@@ -1,0 +1,25 @@
+.close-container {
+  float: right;
+}
+
+.close-container:hover {
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 10px;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+.task-btn-container {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.task-btn {
+  // padding: 2px;
+  margin: 2px;
+}

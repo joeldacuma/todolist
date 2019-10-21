@@ -1,0 +1,19 @@
+<nav class="background navbar navbar-expand-lg">
+  <a class="navbar-brand"><h1>TODO LIST</h1></a>
+  <div *ngIf="showMenu" class="collapse navbar-collapse">
+    <div class="container-right">
+      <div class="form-inline header-form">
+        <button mat-icon-button class="header-icon" (click)="addTask()">
+          <i class="material-icons">add_circle_outline</i>
+        </button>
+        <button mat-icon-button class="header-icon" (click)="editTask()" [disabled]="isEdit">
+          <i class="material-icons">create</i>
+        </button>
+        <button mat-icon-button class="header-icon" (click)="deleteTasks()" [disabled]="isDelete">
+          <i class="material-icons">delete_outline</i>
+        </button>
+        <input (keyup)="applyFilter($event.target.value)" class="form-control mr-sm-2"  placeholder="Search" aria-label="Search">
+      </div>
+    </div>
+  </div>
+</nav>

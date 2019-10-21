@@ -1,0 +1,27 @@
+.task {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin-top: -10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-card {
+  text-align: center;
+  width: 800px;
+  height: 400px;
+}
+
+mat-card-header {
+  justify-content: center;
+}
+
+mat-card-actions {
+  justify-content: center;
+}
+
+.task-description {
+  font-weight: 400;
+  padding-top: 20px;
+}
