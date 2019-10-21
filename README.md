@@ -65,5 +65,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Author
 
-* **Joel L. Dacuma** - *Initial work* - [PurpleBooth](https://github.com/joeldacuma)
+* **Joel L. Dacuma** - *Initial work* - [Joel Dacuma](https://github.com/joeldacuma)
 
