@@ -10,16 +10,20 @@
   padding-top: 10px;
 }
 
-h5 {
-  font-weight: 400;
-}
-
-.task-btn-container {
+.task-btn {
   padding-top: 20px;
   text-align: center;
 }
 
-.task-btn {
-  // padding: 2px;
-  margin: 2px;
+.input-form {
+  width: 100%;
+}
+
+.mat-form-field {
+  padding: 0px 3px 0px 0px;
+}
+
+.align-text {
+  display: inline-block;
+  padding: 5px 5px 5px 8px;
 }

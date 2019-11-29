@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TaskComponent } from './task/task.component';
-import { ModalComponent } from './modal/modal.component';
+import { RecipeComponent } from './recipe/recipe.component';
 
 import { MatFormFieldModule,
          MatInputModule,
@@ -10,8 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    TaskComponent,
-    ModalComponent
+    RecipeComponent
   ],
   imports: [
     CommonModule,
@@ -22,12 +20,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatButtonModule
   ],
   entryComponents: [
-    TaskComponent,
-    ModalComponent
+    RecipeComponent
   ],
   exports: [
-    TaskComponent,
-    ModalComponent
+    RecipeComponent
   ]
 })
 export class WidgetsModule { }

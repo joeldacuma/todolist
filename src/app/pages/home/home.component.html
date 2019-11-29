@@ -1,55 +1,27 @@
-<app-header 
-(searchValue)="applySearch($event)"
-(isCreateTask)="openCreateTask($event)"
-(isDeleteTask)="confirmDelete($event)"
-[showMenu]="true"
-[isEdit]="isEdited"
-[isDelete]="isDeleted"
-(isEditTask)="openEditTask($event)"
-[selectedArr]="selectRows">
+<app-header
+  (isCreateTask)="openCreateTask($event)"
+  [isEdit]="isEdited"
+  (isEditTask)="openEditTask($event)"
+  [selectedArr]="selectRows">
 </app-header>
-<div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource" matSort>
-    <ng-container matColumnDef="select">
-      <mat-header-cell *matHeaderCellDef>
-        <mat-checkbox 
-        (change)="$event ? toggle() : null"
-        [checked]="selection.hasValue() && isAllSelected"
-        [indeterminate]="selection.hasValue() && !isAllSelected()"
-        [aria-label]="checkLabel()">
-          Select
-      </mat-checkbox>
-      </mat-header-cell>
-      <mat-cell *matCellDef="let row">
-        <mat-checkbox
-        (change)="selectToggle($event, row)"
-        [checked]="selection.isSelected(row)"
-        [aria-label]="checkLabel()">
-      </mat-checkbox>
-      </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
-      <mat-cell *matCellDef="let element;">{{element.id}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Task name</mat-header-cell>
-      <mat-cell *matCellDef="let element" (click)="gotoTaskDetails(element)">
-        {{element.name}}
-        <i class="material-icons task-page" matTooltip="Task details">keyboard_arrow_right</i>
-      </mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="description">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Task description</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.description}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="created">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Created</mat-header-cell>
-      <mat-cell *matCellDef="let element">{{element.created}}</mat-cell>
-    </ng-container>
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row class="task-details" *matRowDef="let row; columns: displayedColumns"></mat-row>
-  </table>
-  <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+<div class="row">
+  <div *ngFor="let recipe of recipes" class="col-lg-3 mb-3">
+        <mat-card h-100 [style.background-image]="getImageUrl(recipe.url)">
+            <mat-card-header>
+              <mat-card-title>
+                <h3 class="recipe-title">{{ recipe.title }}</h3>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="recipe-description">
+                {{recipe.description}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="gotoRecipeDetails(recipe)">How to cook</button>
+            </mat-card-actions>
+          </mat-card>
+  </div>
 </div>
+
 

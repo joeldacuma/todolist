@@ -12,13 +12,17 @@ import { MatTableModule,
          MatCardModule,
          MatButtonModule,
          MatDialogModule,
-         MatTooltipModule } from '@angular/material';
-import { TaskComponent } from './task/task.component';
+         MatTooltipModule,
+         MatGridListModule } from '@angular/material';
+import { RecipeComponent } from './recipe/recipe.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    TaskComponent
+    RecipeComponent
   ],
   imports: [
     CommonModule,
@@ -32,11 +36,14 @@ import { TaskComponent } from './task/task.component';
     MatButtonModule,
     MatCardModule,
     MatTooltipModule,
-    WidgetsModule
+    WidgetsModule,
+    FlexLayoutModule,
+    MatGridListModule,
+    RouterModule
   ],
   exports: [
     HomeComponent,
-    TaskComponent
+    RecipeComponent
   ]
 })
 export class PagesModule { }

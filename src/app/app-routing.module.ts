@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
-import { TaskComponent } from './pages/task/task.component';
+import { RecipeComponent } from './pages/recipe/recipe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'task', component: TaskComponent }
+  { path: 'recipe', component: RecipeComponent }
 ];
 
 @NgModule({
